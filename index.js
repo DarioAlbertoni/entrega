@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import 'dotenv/config';
 import productsRouter from './src/routes/products.routes.js';
+import loginRoutes from "./src/routes/auth.routes.js";
 
 const app = express();
 
@@ -22,7 +23,9 @@ app.use((req, res, next) => {
     next();
 })
 
-app.use("api/", productsRouter);
+app.use(loginRoutes)
+
+app.use("/api", productsRouter);
 
 app.use(function (req, res, next) {
     res.status(404)
