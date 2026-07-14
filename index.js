@@ -23,7 +23,7 @@ app.use((req, res, next) => {
     next();
 })
 
-app.use(loginRoutes)
+app.use(loginRoutes);
 
 app.use("/api", productsRouter);
 
