@@ -11,7 +11,7 @@ router.post("products/create", authentication, createProduct);
 
 router.put("/products/:id", authentication, updateProduct);
 
-router.delete("products/:id", authentication, deleteProduct)
+router.delete("/products/:id", authentication, deleteProduct)
 
 //router.get("")
 
